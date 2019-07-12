@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "mainspring" class = "nextspring.SkaiciaiTeksteTvarkymas" scope = "singleton">
+		<constructor-arg index="0" ref="arabiski_skaiciai_eiluteje" />
+		<constructor-arg index="1" ref="skaitymas_is_failo" />
+		<constructor-arg index="2" ref="rasymas_faile" />
+		<constructor-arg index="3" value="src/tekstas.txt" />		
+		<constructor-arg index="4" value="src/vnt.csv" />
+		<constructor-arg index="5" value="src/anti_vnt.csv" /> 
+   </bean>
+   <bean id = "arabiski_skaiciai_eiluteje" class = "nextspring.SkaiciaiEiluteje" scope = "singleton">
+   </bean> 
+   <bean id = "skaitymas_is_failo" class = "nextspring.SkaitymasIsFailo" scope = "singleton">
+   </bean>
+   <bean id = "rasymas_faile" class = "nextspring.RasymasFaile" scope = "singleton">
+   </bean>  
+</beans>
